@@ -1,0 +1,28 @@
+body {
+    font-family: system-ui, sans-serif;
+    text-align: center;
+    margin: 2rem;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-bottom: 0.75rem;
+}
+
+.score-btn {
+    font-size: 1.25rem;
+    padding: 0.35rem 0.75rem;
+    cursor: pointer;
+}
+
+.score {
+    font-size: 1.5rem;
+    margin: 0 0.75rem;
+}
