@@ -2,14 +2,15 @@ const teamAScore = document.getElementById("team-a-score");
 const teamBScore = document.getElementById("team-b-score");
 
 function wireTeam(incrementId, decrementId, scoreEl, storageKey) {
-    let score = Number(localStorage.getItem(storageKey)) || 0;
-    scoreEl.textContent = score;
+    let score = Math.max(0, Number(localStorage.getItem(storageKey)) || 0);
 
     function updateScore(nextScore) {
-        score = nextScore;
+        score = Math.max(0, nextScore);
         scoreEl.textContent = score;
         localStorage.setItem(storageKey, score);
     }
+
+    updateScore(score);
 
     document.getElementById(incrementId).addEventListener("click", () => {
         updateScore(score + 1);
